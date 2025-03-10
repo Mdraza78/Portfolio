@@ -54,3 +54,47 @@
 .space2 {
   width: 30px;
 }
+
+/* Buttons container styling */
+.buttons-container {
+  display: flex;
+  gap: 15px; /* Space between buttons */
+  margin-top: 20px; /* Space above the buttons */
+}
+
+/* Common button styling */
+.contact-button,
+.resume-button {
+  padding: 10px 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+/* Contact Me button styling */
+.contact-button {
+  background-color: #fff;
+  color: black;
+}
+
+.contact-button:hover {
+  background-color: #c7c7c7; /* Darker shade on hover */
+  transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+/* My Resume button styling */
+.resume-button {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.resume-button:hover {
+  color: #c7c7c7; /* Background color on hover */
+  border: 2px solid #c7c7c7; /* Border color on hover */
+  transform: scale(1.05); /* Slightly increase size on hover */
+}

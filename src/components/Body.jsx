@@ -14,6 +14,12 @@ export default function Body() {
         <h1>Full Stack Developer</h1>
         <br />
         <p className="light-text">Building dynamic and responsive web applications with modern technologies</p>
+        
+        {/* Buttons */}
+        <div className="buttons-container">
+          <button className="contact-button">Contact Me</button>
+          <button className="resume-button">My Resume</button>
+        </div>
       </div>
 
       {/* Image on the right */}

@@ -1,82 +1,83 @@
 /* Reset margin and padding for all elements */
 * {
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Navbar container */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    background-color: black;
-    color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Left section containing logo */
-  .left-section {
-    display: flex;
-    align-items: center;
-  }
-  
-  /* Logo styling with custom font */
-  .logo {
-    font-family: 'Caveat', cursive;
-    font-size: 36px;
-    font-weight: 700;
-    color: gold;
-  }
-  
-  /* Navigation links container */
-  .nav-links {
-    display: flex;
-    justify-content: center; /* Center the links horizontally */
-    flex: 1; /* Take up remaining space */
-    gap: 30px;
-  }
-  
-  /* Individual link styling with Montserrat font */
-  .link {
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-    font-weight: 500;
-    transition: color 0.3s ease;
-    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
-  }
-  
-  .link:hover {
-    color: #007bff; /* Change color on hover */
-  }
-  
-  /* Connect button styling */
-  .connect-button {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Center the icon and text */
-    gap: 4px; /* Reduced gap between icon and text */
-    padding: 10px 20px; /* Adjust padding as needed */
-    background-color: #fff;
-    color: black;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 500;
-    height: 40px;
-    transition: background-color 0.3s ease;
-    font-family: sans-serif;
-    width: 155px; /* Adjust width as needed */
-    max-width: 100%; /* Ensure it doesn't exceed its container */
-  }
+  margin: 0;
+  padding: 0;
+}
 
-  .connect-button svg {
-    margin-right: 8px;
-    font-size: 18px;
-  }
-  
-  .connect-button:hover {
-    background-color: #333; /* Darker shade on hover */
-  }
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: black;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Left section containing logo */
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo styling with custom font */
+.logo {
+  font-family: 'Caveat', cursive;
+  font-size: 36px;
+  font-weight: 700;
+  color: gold;
+}
+
+/* Navigation links container */
+.nav-links {
+  display: flex;
+  justify-content: center; /* Center the links horizontally */
+  flex: 1; /* Take up remaining space */
+  gap: 30px;
+}
+
+/* Individual link styling with Montserrat font */
+.link {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+}
+
+.link:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+/* Connect button styling */
+.connect-button {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the icon and text */
+  gap: 4px; /* Reduced gap between icon and text */
+  padding: 10px 20px; /* Adjust padding as needed */
+  background-color: #fff;
+  color: black;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  height: 40px;
+  transition: all 0.3s ease; /* Smooth transition for all properties */
+  font-family: sans-serif;
+  width: 155px; /* Adjust width as needed */
+  max-width: 100%; /* Ensure it doesn't exceed its container */
+}
+
+.connect-button svg {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+.connect-button:hover {
+  background-color: #c7c7c7; /* Darker shade on hover */
+  transform: scale(1.05); /* Slightly increase size on hover */
+}
