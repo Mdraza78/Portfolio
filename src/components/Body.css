@@ -1,15 +1,40 @@
 /* Body container styling */
 .body {
-    height: 86.5vh;
-    background-color: black;
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-  }
-  
-  /* Image styling */
-  .centered-image {
-    max-width: 100%; /* Ensure the image is responsive */
-    max-height: 100%; /* Ensure the image fits within the container */
-    border-radius: 50%; /* Optional: Makes the image circular */
-  }
+  height: 86.5vh;
+  background-color: black;
+  display: flex;
+  justify-content: space-between; /* Space between description and image */
+  align-items: center; /* Center vertically */
+  padding: 0 20px; /* Add padding to the sides */
+}
+
+.space1{
+  width: 30px;
+}
+
+/* Description container styling */
+.description {
+  flex: 1; /* Take up available space */
+  color: white; /* Text color */
+  max-width: 30%; /* Increase width of description */
+  padding-right: 40px; /* Increase spacing between description and image */
+}
+
+/* Image container styling */
+.image-container {
+  display: flex;
+  justify-content: flex-end; /* Align image to the right */
+  align-items: center; /* Center vertically */
+  margin-left: 0; /* Remove margin to move image left */
+}
+
+/* Image styling */
+.centered-image {
+  max-width: 100%; /* Ensure the image is responsive */
+  max-height: 100%; /* Ensure the image fits within the container */
+  border-radius: 0; /* Remove border radius */
+}
+
+.space2{
+  width: 30px;
+}
