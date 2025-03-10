@@ -8,11 +8,12 @@ export default function Body() {
       {/* Description on the left */}
       <div className="space1"></div>
       <div className="description">
-        <h1>Welcome to My Portfolio</h1>
-        <p>
-          Hi, I'm [Your Name], a passionate developer with expertise in React, JavaScript, and modern web technologies.
-          I love building user-friendly and responsive web applications.
-        </p>
+        <p>Hello,</p>
+        
+        <h1>I'm <span className="golden">Md Raza</span></h1> {/* Wrapped "Md Raza" in a span */}
+        <h1>Full Stack Developer</h1>
+        <br />
+        <p className="light-text">Building dynamic and responsive web applications with modern technologies</p>
       </div>
 
       {/* Image on the right */}

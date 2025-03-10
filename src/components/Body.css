@@ -8,7 +8,7 @@
   padding: 0 20px; /* Add padding to the sides */
 }
 
-.space1{
+.space1 {
   width: 30px;
 }
 
@@ -16,8 +16,24 @@
 .description {
   flex: 1; /* Take up available space */
   color: white; /* Text color */
-  max-width: 30%; /* Increase width of description */
+  max-width: 35%; /* Increase width of description */
   padding-right: 40px; /* Increase spacing between description and image */
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Increase font weight of <p> tag */
+.description p {
+  font-weight: 600; /* Semi-bold */
+}
+
+/* Golden color for "Md Raza" */
+.description h1 .golden {
+  color: gold;
+}
+
+/* Light weight for specific <p> tag */
+.description .light-text {
+  font-weight: 400; /* Regular weight */
 }
 
 /* Image container styling */
@@ -35,6 +51,6 @@
   border-radius: 0; /* Remove border radius */
 }
 
-.space2{
+.space2 {
   width: 30px;
 }
