@@ -1,0 +1,71 @@
+/* Reset margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navbar container */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: black;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Left section containing logo */
+  .left-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Logo styling with custom font */
+  .logo {
+    font-family: 'Caveat', cursive;
+    font-size: 36px;
+    font-weight: 700;
+    color: gold;
+  }
+  
+  /* Navigation links container */
+  .nav-links {
+    display: flex;
+    justify-content: center; /* Center the links horizontally */
+    flex: 1; /* Take up remaining space */
+    gap: 30px;
+  }
+  
+  /* Individual link styling with Montserrat font */
+  .link {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+  }
+  
+  .link:hover {
+    color: #007bff; /* Change color on hover */
+  }
+  
+  /* Connect button styling */
+  .connect-button {
+    padding: 10px 25px;
+    background-color: #fff;
+    color: black;
+    border: none;
+    border-radius: 25px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    font-family: sans-serif; /* Default font for the button */
+  }
+  
+  .connect-button:hover {
+    background-color: #333; /* Darker shade on hover */
+  }
