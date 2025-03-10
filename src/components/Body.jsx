@@ -8,7 +8,7 @@ export default function Body() {
       {/* Description on the left */}
       <div className="space1"></div>
       <div className="description">
-        <p>Hello,</p>
+        <p className="light-text">Hello,</p>
         
         <h1>I'm <span className="golden">Md Raza</span></h1> {/* Wrapped "Md Raza" in a span */}
         <h1>Full Stack Developer</h1>
