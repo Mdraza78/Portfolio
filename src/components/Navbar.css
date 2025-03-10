@@ -53,17 +53,28 @@
   
   /* Connect button styling */
   .connect-button {
-    padding: 10px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the icon and text */
+    gap: 4px; /* Reduced gap between icon and text */
+    padding: 10px 20px; /* Adjust padding as needed */
     background-color: #fff;
     color: black;
     border: none;
     border-radius: 25px;
-    height: 40px;
     cursor: pointer;
     font-size: 16px;
     font-weight: 500;
+    height: 40px;
     transition: background-color 0.3s ease;
-    font-family: sans-serif; /* Default font for the button */
+    font-family: sans-serif;
+    width: 155px; /* Adjust width as needed */
+    max-width: 100%; /* Ensure it doesn't exceed its container */
+  }
+
+  .connect-button svg {
+    margin-right: 8px;
+    font-size: 18px;
   }
   
   .connect-button:hover {

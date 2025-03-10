@@ -1,6 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
-import './Navbar.css'; // Import the CSS file
+import { Link } from 'react-router-dom';
+import { FiMessageSquare } from 'react-icons/fi'; 
+import './Navbar.css';
 
 export default function Navbar() {
   return (
@@ -14,7 +15,9 @@ export default function Navbar() {
         <Link to="/portfolio" className="link">Portfolio</Link>
         <Link to="/clients" className="link">Clients</Link>
       </div>
-      <button className="connect-button">Contact me</button>
+      <button className="connect-button">
+        <FiMessageSquare /> Contact me
+      </button>
     </nav>
   );
 }
