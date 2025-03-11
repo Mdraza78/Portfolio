@@ -43,12 +43,13 @@
   color: white;
   font-size: 16px;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease; /* Smooth transition for all properties */
   font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 .link:hover {
-  color: #007bff; /* Change color on hover */
+  color: gold; /* Change color on hover */
+  text-shadow: 0 0 10px gold, 0 0 20px gold; /* Glow effect */
 }
 
 /* Connect button styling */
