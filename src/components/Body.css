@@ -36,6 +36,10 @@
   font-weight: 400; /* Regular weight */
 }
 
+light-text{
+  font-size: 1em;
+}
+
 /* Image container styling */
 .image-container {
   display: flex;

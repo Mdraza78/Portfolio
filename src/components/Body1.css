@@ -1,13 +1,21 @@
 .body {
     background-color: black;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.break {
+    height: 30px;
+}
+
+.space {
+    height: 100px;
+}
+
 .content {
-    text-align: center;
+    text-align: justify;
     color: white;
     padding: 20px;
     max-width: 800px;
@@ -21,83 +29,43 @@
 
 .intro {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.2em;
+    font-size: 1em;
     line-height: 1.6;
 }
 
-.skills ul {
-    list-style-type: none;
-    padding: 0;
+.skills-list {
+    margin-top: 20px;
 }
 
-.skills li {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.2em;
-    color: white;
-    margin: 10px 0;
+.skill-item {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    width: 100%;
-    gap: 100px; /* Reduce space between text and bar */
+    align-items: center;
+    margin-bottom: 15px;
 }
 
-.progress-container {
-    width: 180px; /* Adjust width as needed */
-    height: 6px;
-    background: rgba(255, 215, 0, 0.2); /* Light gold background */
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
+.skill-name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    margin-right: 20px; /* Adds some space between the skill name and the progress bar */
 }
 
 .progress-bar {
-    height: 100%;
-    background: gold; /* Solid gold color */
-    border-radius: 10px;
-    width: 0;
-    animation: fillBar 2s ease-in-out forwards;
-}
-
-/* Animation to fill bars */
-@keyframes fillBar {
-    0% { width: 0; }
-    100% { width: var(--width); }
-}
-
-
-.card {
     background-color: #333;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px 0;
-    display: flex;
-    align-items: center;
-    text-align: left;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 60%; /* Adjust the width as needed */
 }
 
-.card-icon {
-    width: 50px;
-    height: 50px;
-    margin-right: 20px;
+.progress {
+    background-color: gold;
+    height: 10px;
+    border-radius: 5px;
+    width: 0; /* Start with 0 width */
+    transition: width 2s ease-in-out; /* Smooth transition for the animation */
 }
 
-.card-content {
-    flex: 1;
-}
-
-.card-title {
-    font-family: 'Poppins', sans-serif;
-    margin-bottom: 10px;
-}
-
-.card-text {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1em;
-    line-height: 1.6;
-    color: #ccc;
-}
-
-.space {
-    height: 70px;
+/* Animation class */
+.animate .progress {
+    width: var(--progress-width); /* Use CSS variable to set the final width */
 }
