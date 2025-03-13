@@ -25,6 +25,47 @@
     line-height: 1.6;
 }
 
+.skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills li {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+    color: white;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 100px; /* Reduce space between text and bar */
+}
+
+.progress-container {
+    width: 180px; /* Adjust width as needed */
+    height: 6px;
+    background: rgba(255, 215, 0, 0.2); /* Light gold background */
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar {
+    height: 100%;
+    background: gold; /* Solid gold color */
+    border-radius: 10px;
+    width: 0;
+    animation: fillBar 2s ease-in-out forwards;
+}
+
+/* Animation to fill bars */
+@keyframes fillBar {
+    0% { width: 0; }
+    100% { width: var(--width); }
+}
+
+
 .card {
     background-color: #333;
     border-radius: 10px;
@@ -55,4 +96,8 @@
     font-size: 1em;
     line-height: 1.6;
     color: #ccc;
+}
+
+.space {
+    height: 70px;
 }
