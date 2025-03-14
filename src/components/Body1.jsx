@@ -32,6 +32,7 @@ export default function Body1() {
 
   const skills = [
     { name: 'HTML & CSS', level: 90 },
+    { name: 'Bootstrap', level: 95 },
     { name: 'React JS', level: 85 },
     { name: 'JavaScript', level: 88 },
     { name: 'Node JS', level: 80 },
