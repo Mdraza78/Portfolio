@@ -6,6 +6,7 @@ import Work from './Work'
 export default function Main() {
   return (
     <div>
+      
       <Navbar/>
       <Body/>
       <Body1/>
