@@ -10,9 +10,9 @@ const education = [
     icon: <GraduationCap size={18} />,
   },
   {
-    degree: 'MCA',
+    degree: 'BCA',
     institution: 'Techno India College of Technology',
-    location: 'Rajarhat, Kolkata',
+    location: 'Kolkata, West Bengal',
     period: '2022 – 2024',
     icon: <GraduationCap size={18} />,
   },
