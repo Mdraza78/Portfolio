@@ -1,0 +1,193 @@
+.contact-section {
+  background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+  padding: 80px 0;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.contact-heading {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.25;
+  margin-bottom: 1rem;
+}
+
+.hl { color: var(--neon-cyan); }
+
+.contact-subtext {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contact-link-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: var(--bg-card);
+  border: var(--border-subtle);
+  text-decoration: none;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.contact-link-item:not(.no-hover):hover {
+  border-color: rgba(0, 245, 255, 0.25);
+  background: var(--bg-card-hover);
+  transform: translateX(4px);
+}
+
+/* Base Icon Style - Now used for all icons to maintain consistency */
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: rgba(0, 245, 255, 0.1);
+  border: 1px solid rgba(0, 245, 255, 0.3);
+  color: var(--neon-cyan);
+}
+
+/* Specific Color Overrides while keeping the same vibrancy */
+.contact-icon.phone, .contact-icon.linkedin {
+  background: rgba(77, 159, 255, 0.1);
+  border-color: rgba(77, 159, 255, 0.3);
+  color: var(--neon-blue);
+}
+
+.contact-icon.github {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+.contact-icon.location {
+  background: rgba(124, 92, 255, 0.1);
+  border-color: rgba(124, 92, 255, 0.3);
+  color: var(--neon-purple);
+}
+
+.contact-link-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.contact-link-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.contact-link-value {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+}
+
+.copy-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  padding: 0.25rem;
+  transition: color 0.2s;
+}
+
+.copy-btn:hover { color: var(--neon-cyan); }
+
+/* Terminal card styles */
+.contact-cta-card {
+  background: var(--bg-card);
+  border: var(--border-subtle);
+  overflow: hidden;
+}
+
+.cta-terminal {
+  border-bottom: var(--border-subtle);
+}
+
+.terminal-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.65rem 1rem;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.terminal-bar span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.terminal-bar span:nth-child(1) { background: #ff5f56; }
+.terminal-bar span:nth-child(2) { background: #ffbd2e; }
+.terminal-bar span:nth-child(3) { background: #27c93f; }
+
+.terminal-title {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-left: auto;
+}
+
+.terminal-body {
+  padding: 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  line-height: 1.75;
+}
+
+.t-line { display: block; }
+.t-line.indent { padding-left: 1.25rem; }
+.t-line.mt { margin-top: 0.5rem; }
+
+.t-kw { color: #c792ea; }
+.t-var { color: #82aaff; }
+.t-prop { color: #f07178; }
+.t-str { color: #c3e88d; }
+.t-fn { color: #82aaff; }
+.t-cyan { color: var(--neon-cyan); }
+.t-comment { color: var(--text-muted); font-style: italic; }
+
+.cta-actions {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-bottom: var(--border-subtle);
+  flex-wrap: wrap;
+}
+
+.cta-note {
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+}
