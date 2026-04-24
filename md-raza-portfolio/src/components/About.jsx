@@ -13,7 +13,7 @@ const education = [
     degree: 'BCA',
     institution: 'Techno India College of Technology',
     location: 'Kolkata, West Bengal',
-    period: '2022 – 2024',
+    period: '2021 – 2024',
     icon: <GraduationCap size={18} />,
   },
 ];
