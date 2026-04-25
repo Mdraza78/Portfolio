@@ -111,8 +111,17 @@
 @media (max-width: 768px) {
   .hamburger { display: flex; }
 
-  /* Give navbar a solid bg on mobile always so logo never disappears */
+  /* Base mobile navbar */
   .navbar {
+    background: rgba(5, 10, 18, 0.97);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(0, 245, 255, 0.08);
+    padding: 1rem 1.5rem;
+  }
+
+  /* 🛠️ Prevent ANY style change on scroll */
+  .navbar.scrolled {
     background: rgba(5, 10, 18, 0.97);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
