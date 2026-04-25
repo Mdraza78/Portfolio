@@ -13,15 +13,29 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [active, setActive] = useState('');
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect mobile on mount and resize
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-      if (menuOpen) setMenuOpen(false); // close on scroll
+      // Only set scrolled on desktop
+      if (!isMobile) {
+        setScrolled(window.scrollY > 50);
+      }
+      if (menuOpen) setMenuOpen(false);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [menuOpen]);
+  }, [menuOpen, isMobile]);
 
   // Lock body scroll when drawer is open
   useEffect(() => {
@@ -36,6 +50,7 @@ export default function Navbar() {
 
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+      {/* rest of your JSX remains identical */}
       <div className="nav-inner">
         <a href="#hero" className="nav-logo">
           <span className="logo-bracket">&lt;</span>
