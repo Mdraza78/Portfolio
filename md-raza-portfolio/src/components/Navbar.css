@@ -21,6 +21,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  z-index: 102;
 }
 
 .nav-logo {
@@ -32,13 +34,8 @@
   letter-spacing: 0.05em;
 }
 
-.logo-bracket {
-  color: var(--neon-cyan);
-}
-
-.logo-name {
-  color: var(--text-primary);
-}
+.logo-bracket { color: var(--neon-cyan); }
+.logo-name { color: var(--text-primary); }
 
 .nav-links {
   display: flex;
@@ -84,6 +81,8 @@
   border: none;
   cursor: pointer;
   padding: 4px;
+  position: relative;
+  z-index: 102;
 }
 
 .hamburger span {
@@ -99,43 +98,46 @@
 .hamburger.open span:nth-child(2) { opacity: 0; }
 .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-/* Dimmed overlay behind the drawer */
+/* Full-screen dimmed overlay */
 .nav-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.65);
-  backdrop-filter: blur(3px);
-  z-index: 98;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 99;
 }
-
-.hamburger {
-  z-index: 101;
-  position: relative;
-}
-.nav-overlay.open { display: block; }
-
 
 @media (max-width: 768px) {
   .hamburger { display: flex; }
+
+  /* Give navbar a solid bg on mobile always so logo never disappears */
+  .navbar {
+    background: rgba(5, 10, 18, 0.97);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(0, 245, 255, 0.08);
+    padding: 1rem 1.5rem;
+  }
 
   .nav-links {
     position: fixed;
     top: 0;
     right: -100%;
     bottom: 0;
-    width: 280px;
-    background: rgba(8, 15, 26, 0.98);
-    backdrop-filter: blur(20px);
-    border-left: 1px solid rgba(0,245,255,0.1);
+    width: 75vw;
+    max-width: 300px;
+    background: #080f1a;
+    border-left: 1px solid rgba(0, 245, 255, 0.15);
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
     gap: 2rem;
     padding: 2rem;
-    transition: right 0.35s ease;
-    z-index: 99;
+    transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 101;
   }
 
   .nav-links.open { right: 0; }
-
   .nav-links a { font-size: 1rem; }
 }
