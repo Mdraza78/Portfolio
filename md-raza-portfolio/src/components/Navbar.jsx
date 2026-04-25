@@ -33,7 +33,10 @@ export default function Navbar() {
           <span className="logo-name">MD.RAZA</span>
           <span className="logo-bracket"> /&gt;</span>
         </a>
-
+                <div
+          className={`nav-overlay ${menuOpen ? 'open' : ''}`}
+          onClick={() => setMenuOpen(false)}
+        />
         <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
           {navLinks.map(link => (
             <li key={link.href}>
