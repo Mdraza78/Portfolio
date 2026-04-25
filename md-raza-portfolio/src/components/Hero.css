@@ -278,3 +278,32 @@
   .avatar-inner { width: 190px; height: 165px; }
   .avatar-code { font-size: 0.62rem; }
 }
+
+@media (max-width: 768px) {
+  .hero-avatar {
+    width: 260px;
+    height: 260px;
+    margin: 1rem auto;
+  }
+
+  .avatar-tech-orbit {
+    inset: -25px; /* Give more room for the tags */
+  }
+
+  .orbit-tag {
+    font-size: 0.55rem;
+    padding: 0.2rem 0.45rem;
+    white-space: nowrap;
+  }
+
+  /* Pull right/left tags slightly inward to prevent cutting */
+  .orbit-tag:nth-child(2) {  /* Express (right side) */
+    right: 5px;
+    left: auto;
+  }
+
+  .orbit-tag:nth-child(4) {  /* Node (left side) */
+    left: 5px;
+    right: auto;
+  }
+}
