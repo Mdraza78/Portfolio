@@ -99,17 +99,21 @@
 .hamburger.open span:nth-child(2) { opacity: 0; }
 .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
+/* Dimmed overlay behind the drawer */
 .nav-overlay {
-  display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(3px);
   z-index: 98;
-  backdrop-filter: blur(2px);
+}
+
+.hamburger {
+  z-index: 101;
+  position: relative;
 }
 .nav-overlay.open { display: block; }
 
-.hamburger { z-index: 101; }
 
 @media (max-width: 768px) {
   .hamburger { display: flex; }

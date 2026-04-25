@@ -15,10 +15,19 @@ export default function Navbar() {
   const [active, setActive] = useState('');
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+      if (menuOpen) setMenuOpen(false); // close on scroll
+    };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [menuOpen]);
+
+  // Lock body scroll when drawer is open
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [menuOpen]);
 
   const handleNav = (href) => {
     setActive(href);
@@ -33,10 +42,11 @@ export default function Navbar() {
           <span className="logo-name">MD.RAZA</span>
           <span className="logo-bracket"> /&gt;</span>
         </a>
-                <div
-          className={`nav-overlay ${menuOpen ? 'open' : ''}`}
-          onClick={() => setMenuOpen(false)}
-        />
+
+        {menuOpen && (
+          <div className="nav-overlay" onClick={() => setMenuOpen(false)} />
+        )}
+
         <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
           {navLinks.map(link => (
             <li key={link.href}>
@@ -50,13 +60,18 @@ export default function Navbar() {
             </li>
           ))}
           <li>
-            <a href="mailto:mdraza78601@gmail.com" className="nav-cta">
+            <a href="mailto:mdraza78601@gmail.com" className="nav-cta"
+               onClick={() => setMenuOpen(false)}>
               Hire Me
             </a>
           </li>
         </ul>
 
-        <button className={`hamburger ${menuOpen ? 'open' : ''}`} onClick={() => setMenuOpen(!menuOpen)}>
+        <button
+          className={`hamburger ${menuOpen ? 'open' : ''}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
           <span /><span /><span />
         </button>
       </div>
