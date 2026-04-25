@@ -111,22 +111,15 @@
 @media (max-width: 768px) {
   .hamburger { display: flex; }
 
-  /* Base mobile navbar */
-  .navbar {
-    background: rgba(5, 10, 18, 0.97);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(0, 245, 255, 0.08);
-    padding: 1rem 1.5rem;
-  }
-
-  /* 🛠️ Prevent ANY style change on scroll */
+  /* Mobile navbar — solid, no blur, no transition */
+  .navbar,
   .navbar.scrolled {
-    background: rgba(5, 10, 18, 0.97);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(0, 245, 255, 0.08);
+    background: #050a12;          /* Solid dark — no transparency */
+    backdrop-filter: none;        /* Remove blur effect */
+    -webkit-backdrop-filter: none;
+    border-bottom: 1px solid rgba(0, 245, 255, 0.2); /* Slightly brighter */
     padding: 1rem 1.5rem;
+    transition: none;             /* No animation on scroll */
   }
 
   .nav-links {
